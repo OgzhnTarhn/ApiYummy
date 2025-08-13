@@ -39,6 +39,7 @@ namespace ApiProjectKampi.WebApi.Controllers
         {
             var value = _context.Features.Find(id);
             _context.Features.Remove(value);
+            _context.SaveChanges();
             return Ok("Silme işlemi başarılı");
         }
 
@@ -54,6 +55,7 @@ namespace ApiProjectKampi.WebApi.Controllers
         {
             var value = _mapper.Map<Feature>(updateFeatureDto);
             _context.Features.Update(value);
+            _context.SaveChanges();
             return Ok("Güncelleme işlemi başarılı");
         }
 
