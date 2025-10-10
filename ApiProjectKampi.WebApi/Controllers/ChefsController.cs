@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ApiProjectKampi.WebApi.Context;
 using ApiProjectKampi.WebApi.Entities;
+using ApiProjeKampi.WebApi.Context;
 
 namespace ApiProjectKampi.WebApi.Controllers
 {
