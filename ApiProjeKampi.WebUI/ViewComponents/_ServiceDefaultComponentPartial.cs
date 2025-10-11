@@ -11,11 +11,12 @@ namespace ApiProjeKampi.WebUI.ViewComponents
         {
             _httpClientFactory = httpClientFactory;
         }
+
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7143/api/Services/");
-            if(responseMessage.IsSuccessStatusCode)
+            var responseMessage = await client.GetAsync("https://localhost:7020/api/Services/");
+            if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
                 var values = JsonConvert.DeserializeObject<List<ResultServiceDto>>(jsonData);
