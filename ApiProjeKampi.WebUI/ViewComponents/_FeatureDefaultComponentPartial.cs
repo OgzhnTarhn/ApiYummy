@@ -16,7 +16,7 @@ namespace ApiProjeKampi.WebUI.ViewComponents
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();
-            var responseMessage = await client.GetAsync("https://localhost:7020/api/Features/");
+            var responseMessage = await client.GetAsync("https://localhost:7143/api/Features/");
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
