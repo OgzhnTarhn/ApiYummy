@@ -4,14 +4,13 @@ using Newtonsoft.Json;
 
 namespace ApiProjeKampi.WebUI.ViewComponents.DefaultMenuViewComponents
 {
-    public class _DefaultMenuProductViewComponentPartial : ViewComponent
+    public class _DefaultMenuProductComponentPartial : ViewComponent
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        public _DefaultMenuProductViewComponentPartial(IHttpClientFactory httpClientFactory)
+        public _DefaultMenuProductComponentPartial(IHttpClientFactory httpClientFactory)
         {
             _httpClientFactory = httpClientFactory;
         }
-
         public async Task<IViewComponentResult> InvokeAsync()
         {
             var client = _httpClientFactory.CreateClient();

@@ -12,8 +12,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.18" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Requirements\" />
-  </ItemGroup>
-
 </Project>
