@@ -1,8 +1,9 @@
 ﻿using ApiProjeKampi.WebUI.Dtos.MessageDtos;
+using ApiProjeKampi.WebUI.Dtos.NotificationDtos;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutNabvarViewComponents
+namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutNavbarViewComponents
 {
     public class _NavbarNotificationAdminLayoutComponentPartial : ViewComponent
     {
@@ -19,10 +20,10 @@ namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutNabvarViewComponents
             if (responseMessage.IsSuccessStatusCode)
             {
                 var jsonData = await responseMessage.Content.ReadAsStringAsync();
-                var values = JsonConvert.DeserializeObject<List<ResultMessageByIsReadFalseDto>>(jsonData);
+                var values = JsonConvert.DeserializeObject<List<ResultNotificationDto>>(jsonData);
                 return View(values);
             }
-            return View();
+            return View(new List<ResultNotificationDto>());
         }
     }
 }

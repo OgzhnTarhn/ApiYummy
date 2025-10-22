@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutNabvarViewComponents
+namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutNavbarViewComponents
 {
     public class _NavbarFormInlineAdminLayoutComponentPartial : ViewComponent
     {
