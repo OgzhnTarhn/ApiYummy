@@ -1,8 +1,10 @@
 ﻿@model GetCategoryByIdDto
+
 @{
     ViewData["Title"] = "GetCategory";
     Layout = "~/Views/AdminLayout/Index.cshtml";
 }
+
 <section class="section">
     <div class="section-body">
         <div class="row">
@@ -17,7 +19,7 @@
                             <label>Kategori Adı</label>
                             <input type="text" asp-for="CategoryName" class="form-control" />
                             <br />
-                            <button class="btn btn-primary">Kategoriyi Düzenle</button>
+                            <button class="btn btn-success">Kategoriyi Düzenle</button>
                         </form>
                     </div>
                 </div>
